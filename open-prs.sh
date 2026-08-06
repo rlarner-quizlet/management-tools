@@ -3,10 +3,11 @@ set +x
 
 PR_SEARCH_LIMIT="${PR_SEARCH_LIMIT:-100}"
 
-GROWTH_ENGINEERS=(bryceeller-qz nanditanaik-qz rlarner-quizlet scv-roma-caro scvsoft-ayelensanchez scvsoft-briangrajeda scvsoft-damianpisaturo scvsoft-danielwyrytowski scvsoft-federicocolombatti
-scvsoft-leilaybanez scvsoft-miguelgonzalez scvsoft-rodrigobalazs scvsoft-tano yangli-qz)
+ENGINEERS=(aarongregory-qz arctouch-danielbastos arctouch-diogosouza arctouch-joaogoulart arctouch-matheusvaccaro arturonieto-qz bryceeller-qz chrisopperwall-qz
+danielberezhnyi-qz naifalrayes-qz nanditanaik-qz q-lucas-tannus rlarner-quizlet scv-roma-caro scvsoft-ayelensanchez scvsoft-briangrajeda
+scvsoft-damianpisaturo scvsoft-danielwyrytowski scvsoft-federicocolombatti scvsoft-leilaybanez scvsoft-miguelgonzalez scvsoft-rodrigobalazs scvsoft-tano shogotanaka-qz yangli-qz)
 
-REPOS=(quizlet/quizlet-web quizlet/go-services quizlet/quizlet-infrastructure quizlet/monitoring-infra quizlet/quizlet-shared-config)
+REPOS=(quizlet/monorepo quizlet/quizlet-web quizlet/go-services quizlet/quizlet-infrastructure quizlet/monitoring-infra quizlet/quizlet-shared-config quizlet/service-inference-lookup)
 
 function gh_safe() {
   env -u GH_TOKEN -u GITHUB_TOKEN gh "$@"
@@ -58,7 +59,7 @@ done
 tmpfile=$(mktemp)
 had_errors=0
 
-for eng in "${GROWTH_ENGINEERS[@]}"; do
+for eng in "${ENGINEERS[@]}"; do
   if ! run_gh_capture search prs --author "$eng" --state open \
     --json number,title,repository,url,createdAt --limit "$PR_SEARCH_LIMIT" -- "-is:draft"; then
     warn_gh_failure "failed to search open non-draft PRs for $eng"
