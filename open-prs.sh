@@ -7,7 +7,7 @@ ENGINEERS=(aarongregory-qz arturonieto-qz bryceeller-qz chrisopperwall-qz nandit
 scv-roma-caro scvsoft-ayelensanchez scvsoft-briangrajeda scvsoft-damianpisaturo scvsoft-danielwyrytowski scvsoft-federicocolombatti
 scvsoft-leilaybanez scvsoft-miguelgonzalez scvsoft-rodrigobalazs scvsoft-tano shogotanaka-qz yangli-qz)
 
-REPOS=(quizlet/quizlet-web quizlet/go-services quizlet/quizlet-infrastructure quizlet/monitoring-infra quizlet/quizlet-shared-config)
+REPOS=(quizlet/monorepo quizlet/quizlet-web quizlet/go-services quizlet/quizlet-infrastructure quizlet/monitoring-infra quizlet/quizlet-shared-config quizlet/service-inference-lookup)
 
 function gh_safe() {
   env -u GH_TOKEN -u GITHUB_TOKEN gh "$@"
