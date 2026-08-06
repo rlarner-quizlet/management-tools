@@ -3,9 +3,9 @@ set +x
 
 PR_SEARCH_LIMIT="${PR_SEARCH_LIMIT:-100}"
 
-ENGINEERS=(aarongregory-qz arturonieto-qz bryceeller-qz chrisopperwall-qz nanditanaik-qz q-lucas-tannus rlarner-quizlet
-scv-roma-caro scvsoft-ayelensanchez scvsoft-briangrajeda scvsoft-damianpisaturo scvsoft-danielwyrytowski scvsoft-federicocolombatti
-scvsoft-leilaybanez scvsoft-miguelgonzalez scvsoft-rodrigobalazs scvsoft-tano shogotanaka-qz yangli-qz)
+ENGINEERS=(aarongregory-qz arctouch-danielbastos arctouch-diogosouza arctouch-joaogoulart arctouch-matheusvaccaro arturonieto-qz bryceeller-qz chrisopperwall-qz
+danielberezhnyi-qz naifalrayes-qz nanditanaik-qz q-lucas-tannus rlarner-quizlet scv-roma-caro scvsoft-ayelensanchez scvsoft-briangrajeda
+scvsoft-damianpisaturo scvsoft-danielwyrytowski scvsoft-federicocolombatti scvsoft-leilaybanez scvsoft-miguelgonzalez scvsoft-rodrigobalazs scvsoft-tano shogotanaka-qz yangli-qz)
 
 REPOS=(quizlet/monorepo quizlet/quizlet-web quizlet/go-services quizlet/quizlet-infrastructure quizlet/monitoring-infra quizlet/quizlet-shared-config quizlet/service-inference-lookup)
 
